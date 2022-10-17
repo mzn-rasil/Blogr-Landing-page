@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="/dist/style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogr Landing Page</title>
+</head>
+
+<body class="text-base overflow-x-hidden">
+    <div class="absolute hidden left-1/2 -translate-x-1/2 z-50 top-24 mt-4 border w-96 bg-white rounded-lg divide-y-2 mobileNav">
+        <div>
+            <ul class="text-center mobileMenu">
+                <li class="flex flex-col items-center space-y-4 px-8 py-4">
+                    <div class="flex items-center">
+                        Product
+                        <span class="pl-2">
+                            <img src="/images/icon-arrow-dark.svg" alt="down-arrow" class="transition-all delay-100" />
+                        </span>
+                    </div>
+                    <div class="w-full border rounded-lg bg-slate-200 py-4 hidden">
+                        <ul class="space-y-4 text-heading text-opacity-60 font-ubuntu tracking-tight">
+                            <li class="hover:font-bold">Overview</li>
+                            <li class="hover:font-bold">Pricing</li>
+                            <li class="hover:font-bold">Marketplace</li>
+                            <li class="hover:font-bold">Features</li>
+                            <li class="hover:font-bold">Integrations</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="flex flex-col items-center space-y-4 px-8 py-4">
+                    <div class="flex items-center">
+                        Company
+                        <span class="pl-2">
+                        <img src="/images/icon-arrow-dark.svg" alt="down-arrow" class="transition-all delay-100" />
+                    </span>
+                    </div>
+                    <div class="w-full border rounded-lg bg-slate-200 py-4 hidden">
+                        <ul class="space-y-4 text-heading text-opacity-60 font-ubuntu tracking-tight">
+                            <li class="hover:font-bold">About</li>
+                            <li class="hover:font-bold">Team</li>
+                            <li class="hover:font-bold">Blog</li>
+                            <li class="hover:font-bold">Carrers</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="flex flex-col items-center space-y-4 px-8 py-4">
+                    <div class="flex items-center">
+                        Connect
+                        <span class="pl-2">
+                        <img src="/images/icon-arrow-dark.svg" alt="down-arrow" class="transition-all delay-100" />
+                    </span>
+                    </div>
+                    <div class="w-full border rounded-lg bg-slate-200 py-4 hidden">
+                        <ul class="space-y-4 text-heading text-opacity-60 font-ubuntu tracking-tight">
+                            <li class="hover:font-bold">Contact</li>
+                            <li class="hover:font-bold">Newsletter</li>
+                            <li class="hover:font-bold">LinkedIn</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col space-y-8 py-8">
+            <button class="font-bold text-lg">Login</button>
+            <button class="border mx-28 py-2 bg-gradient-to-r from-nav-grad-from to-nav-grad-to text-white font-bold rounded-full">Sign Up</button>
+        </div>
+    </div>
+
+    <header class="relative px-4 py-12 bg-gradient-to-r from-nav-grad-from to-nav-grad-to rounded-bl-[10rem] overflow-hidden">
+        <!-- Insert absolute background -->
+        <button class="absolute z-0 w-[1200px] -top-72 -left-72 block lg:hidden">
+            <img src="/images/bg-pattern-intro-mobile.svg" alt="Bg-intro-mobile" />
+        </button>
+
+        <div class="absolute z-0 w-[1900px] scale-150 -bottom-96 left-1/2 -translate-x-1/3 hidden lg:block">
+            <img src="/images/bg-pattern-intro-desktop.svg" alt="Bg-intro-desktop" />
+        </div>
+
+        <div class="container max-w-7xl mx-auto z-10 px-4">
+            <nav class="z-20 relative flex items-center justify-between">
+                <img src="/images/logo.svg" alt="Logo" class="z-20" />
+
+                <div class="z-20 block lg:hidden hamburgerMenu">
+                    <img src="/images/icon-hamburger.svg" alt="hamburger" class="" />
+                    <img src="/images/icon-close.svg" alt="close hamburger" class="hidden" />
+                </div>
+
+                <ul class="z-20 hidden justify-start items-center grow gap-8 ml-16 font-ubuntu text-white lg:flex navList">
+                    <li class="group">
+                        <button data-dropdown-toggle="dropdown" type="button" class="flex items-center hover:underline">
+                                Product
+                                <span class="pl-2">
+                                    <img src="/images/icon-arrow-light.svg" alt="down-arrow" class="transition-all delay-100 group-focus-within:rotate-180" />
+                                </span>
+                        </button>
+                        <div id="dropdown" class="hidden w-32 bg-white text-heading font-ubunutu text-sm px-6 py-6 rounded-md drop-shadow-lg hover:cursor-pointer">
+                            <ul class="space-y-2">
+                                <li class="hover:font-bold">Overview</li>
+                                <li class="hover:font-bold">Pricing</li>
+                                <li class="hover:font-bold">Marketplace</li>
+                                <li class="hover:font-bold">Features</li>
+                                <li class="hover:font-bold">Integrations</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="group">
+                        <button data-dropdown-toggle="dropdown2" type="button" class="flex items-center hover:underline">
+                                Company
+                                <span class="pl-2">
+                                    <img src="/images/icon-arrow-light.svg" alt="down-arrow" class="transition-all delay-100 group-focus-within:rotate-180" />
+                                </span>
+                        </button>
+                        <div id="dropdown2" class="hidden w-32 bg-white text-heading font-ubunutu text-sm px-6 py-6 rounded-md drop-shadow-lg hover:cursor-pointer">
+                            <ul class="space-y-2">
+                                <li class="hover:font-bold">About</li>
+                                <li class="hover:font-bold">Team</li>
+                                <li class="hover:font-bold">Blog</li>
+                                <li class="hover:font-bold">Carrers</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="group">
+                        <button data-dropdown-toggle="dropdown3" type="button" class="flex items-center hover:underline">
+                            Connect
+                            <span class="pl-2">
+                                <img src="/images/icon-arrow-light.svg" alt="down-arrow" class="transition-all delay-100 group-focus-within:rotate-180" />
+                            </span>
+                        </button>
+                        <div id="dropdown3" class="hidden w-32 bg-white text-heading font-ubunutu text-sm px-6 py-6 rounded-md drop-shadow-lg hover:cursor-pointer">
+                            <ul class="space-y-2">
+                                <li class="hover:font-bold">Contact</li>
+                                <li class="hover:font-bold">Newsletter</li>
+                                <li class="hover:font-bold">LinkedIn</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="z-20 hidden items-center gap-16 text-white font-overpass lg:flex">
+                    <button class="hover:underline hover:underline-offset-1">
+                        Login
+                    </button>
+
+                    <button class="bg-white px-8 py-2 rounded-full font-bold shadow-md text-cta-text hover:bg-opacity-30 hover:text-white">
+                        Sign Up
+                    </button>
+                </div>
+            </nav>
+
+            <div class="flex flex-col space-y-4 items-center py-24 px-4 font-ubuntu text-center lg:py-40 lg:space-y-8 ">
+                <h1 class="z-10 text-white text-3xl tracking-tight leading-snug lg:text-6xl ">A modern publishing platform</h1>
+                <p class="text-white text-base opacity-70 lg:text-lg ">Grow your audience and build your online brand</p>
+                <div class="z-10 w-full pt-8 flex flex-wrap gap-6 justify-center sm:gap-8 ">
+                    <button class="bg-white text-cta-text font-bold px-8 py-2 rounded-full shadow-lg hover:bg-opacity-30 hover:text-white ">
+                        Start for free
+                    </button>
+                    <button class="border border-white rounded-full px-8 py-2 bg-cta-text font-bold text-white shadow-lg hover:bg-white hover:text-cta-text ">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mt-24 px-4 ">
+        <section class="container max-w-7xl mx-auto flex flex-col items-center lg:relative ">
+            <h2 class="font-overpass text-heading font-bold text-2xl lg:text-4xl lg:mt-24 ">Designed for the future</h2>
+
+            <div class="mt-12 block lg:hidden ">
+                <img src="/images/illustration-editor-mobile.svg " alt="Editor illustration " />
+            </div>
+
+            <div class="hidden lg:block lg:absolute -right-1/2 xl:-right-1/3 2xl:-right-1/4 ">
+                <img src="/images/illustration-editor-desktop.svg " alt="Editor illustration " />
+            </div>
+
+            <div class="lg:pb-48 lg:py-24 ">
+                <div class="flex flex-col items-center text-center mt-12 lg:items-start lg:mr-auto lg:w-1/2 ">
+                    <h1 class="font-overpass text-heading font-bold text-2xl px-10 lg:text-4xl lg:px-0 lg:text-start">Introducing an extensible editor</h1>
+                    <p class=" text-black text-sm font-overpass px-6 leading-relaxed mt-4 opacity-70 lg:text-lg lg:px-0 lg:text-start ">
+                        Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins
+                        and themes provide easy ways to add functionality or change the looks of a blog.
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center mt-12 lg:items-start lg:mr-auto lg:w-1/2 ">
+                    <h1 class="font-overpass text-heading font-bold text-2xl px-10 text-center lg:text-4xl lg:px-0 lg:text-start ">Robust content management</h1>
+                    <p class="text-center text-black text-sm font-overpass px-6 leading-relaxed mt-4 opacity-70 lg:text-lg lg:px-0 lg:text-start ">
+                        Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="z-10 relative mt-60 -mx-4 bg-gradient-to-r from-body-grad-from to-body-grad-to rounded-tr-[5rem] rounded-bl-[5rem] ">
+            <div class="container max-w-7xl mx-auto lg:relative ">
+                <div class="z-0 w-[400px] h-[500px] object-contain absolute -top-[200px] left-1/2 -translate-x-1/2 lg:top-0 lg:scale-150 lg:translate-y-0 lg:left-1/4 lg:-translate-x-1/2 ">
+                    <img src="/images/illustration-phones.svg " alt="Phones " />
+                </div>
+
+                <div class="relative overflow-y-hidden ">
+                    <div class="-z-10 absolute top-0 lg:-left-48 lg:-top-96 ">
+                        <img src="/images/bg-pattern-circles.svg " alt="Circle pattern " />
+                    </div>
+
+                    <div class="container mx-auto max-w-7xl pt-60 pb-32 lg:pt-32 ">
+
+                        <div class="container ml-auto lg:max-w-2xl lg:ml-auto px-8 ">
+                            <h3 class="z-50 font-overpass text-3xl text-center text-white font-bold leading-normal lg:text-start ">State of the Art Infrastructure</h3>
+                            <p class="z-50 mt-6 px-4 font-overpass text-base text-center text-white leading-relaxed lg:text-start lg:px-0 ">
+                                With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative mt-24 lg:mt-48 ">
+            <div class="flex lg:hidden justify-center ">
+                <img src="/images/illustration-laptop-mobile.svg " alt="Laptop Illustration Mobile " />
+            </div>
+
+            <div class="container max-w-7xl mx-auto lg:py-60 lg:relative ">
+                <div class="hidden lg:block lg:absolute top-0 -left-1/2 xl:-left-1/3 2xl:-left-1/4 ">
+                    <img src="/images/illustration-laptop-desktop.svg " alt="Laptop Illustration Desktop " />
+                </div>
+
+                <div class="container mx-auto lg:mx-0 lg:ml-auto lg:max-w-2xl space-y-8 ">
+                    <article class="text-center lg:text-start ">
+                        <h1 class="font-overpass text-2xl text-heading font-bold tracking-tight lg:text-4xl ">
+                            Free, open, simple
+                        </h1>
+
+                        <p class="mt-6 font-overpass text-black opacity-60 font-normal px-6 leading-relaxed lg:px-0 lg:text-lg ">
+                            Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics.
+                            The architecture is clean and is relatively easy to learn.
+                        </p>
+                    </article>
+                    <article class="text-center lg:text-start ">
+                        <h1 class="font-overpass text-2xl text-heading font-bold tracking-tight lg:text-4xl ">
+                            Powerful tooling
+                        </h1>
+
+                        <p class="mt-6 font-overpass text-black opacity-60 font-normal px-6 leading-relaxed lg:px-0 lg:text-lg ">
+                            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-footer-bg py-12 mt-28 lg:mt-12 rounded-tr-[5rem] ">
+        <div class="container max-w-7xl mx-auto px-4 flex flex-col items-center gap-12 lg:flex-row lg:justify-between">
+            <div class="lg:self-start">
+                <img src="/images/logo.svg " alt="Logo " />
+            </div>
+
+            <section class="flex flex-col gap-4 text-center text-white lg:self-start">
+                <h4 class="font-overpass font-bold text-lg lg:text-start">Product</h4>
+
+                <ul class="space-y-2 opacity-70 font-overpass tracking-tight lg:text-start">
+                    <li class="hover:underline ">Overview</li>
+                    <li class="hover:underline ">Pricing</li>
+                    <li class="hover:underline ">Marketplace</li>
+                    <li class="hover:underline ">Features</li>
+                    <li class="hover:underline ">Integrations</li>
+                </ul>
+            </section>
+
+            <section class="flex flex-col gap-4 text-center text-white lg:self-start">
+                <h4 class="font-overpass font-bold text-lg lg:text-start">Company</h4>
+
+                <ul class="space-y-2 opacity-70 font-overpass tracking-tight lg:text-start">
+                    <li class="hover:underline ">About</li>
+                    <li class="hover:underline ">Team</li>
+                    <li class="hover:underline ">Blog</li>
+                    <li class="hover:underline ">Carrers</li>
+                </ul>
+            </section>
+
+            <section class="flex flex-col gap-4 text-center text-white lg:self-start">
+                <h4 class="font-overpass font-bold text-lg lg:text-start">Connect</h4>
+
+                <ul class="space-y-2 opacity-70 font-overpass tracking-tight lg:text-start">
+                    <li class="hover:underline ">Contact</li>
+                    <li class="hover:underline ">Newsletter</li>
+                    <li class="hover:underline ">LinkedIn</li>
+                </ul>
+            </section>
+
+        </div>
+    </footer>
+
+    <script src="./app.js " defer></script>
+    <script src="./node_modules/flowbite/dist/flowbite.js "></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js "></script>
+</body>
+
+</html>
